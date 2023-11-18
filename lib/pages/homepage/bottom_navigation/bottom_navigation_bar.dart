@@ -1,5 +1,6 @@
-// MyBottomNavigationBar.dart
+// bottom_navigation_bar.dart
 import 'package:flutter/material.dart';
+import 'profile/profile_bottom_sheet.dart';
 import 'plus/PlusButtonBottomSheet.dart';
 
 class MyBottomNavigationBar extends StatelessWidget {
@@ -11,11 +12,11 @@ class MyBottomNavigationBar extends StatelessWidget {
     required this.onItemTapped,
   });
 
-  void _showBottomSheet(BuildContext context) {
+  void _showBottomSheet(BuildContext context, Widget sheet) {
     showModalBottomSheet(
       context: context,
       builder: (BuildContext context) {
-        return PlusButtonBottomSheet(); // Use the new file here
+        return sheet;
       },
     );
   }
@@ -34,7 +35,7 @@ class MyBottomNavigationBar extends StatelessWidget {
         ],
       ),
       child: BottomNavigationBar(
-        elevation: 3.0, // Adjust the elevation as needed
+        elevation: 3.0,
         items: [
           BottomNavigationBarItem(
             icon: Icon(Icons.home, size: 30.0),
@@ -49,7 +50,7 @@ class MyBottomNavigationBar extends StatelessWidget {
             label: 'Device Connection',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.person, size: 30.0),
+            icon: Icon(Icons.account_circle, size: 30.0),
             label: 'Profile',
           ),
         ],
@@ -58,7 +59,9 @@ class MyBottomNavigationBar extends StatelessWidget {
         unselectedItemColor: Color(0xFF331640),
         onTap: (index) {
           if (index == 1) {
-            _showBottomSheet(context);
+            _showBottomSheet(context, PlusButtonBottomSheet());
+          } else if (index == 3) {
+            _showBottomSheet(context, ProfileBottomSheet(context));
           } else {
             onItemTapped(index);
           }

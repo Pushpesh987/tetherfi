@@ -63,7 +63,7 @@ class PlusButtonBottomSheet extends StatelessWidget {
 
   Widget buildDivider() {
     return Divider(
-      height: 16.0, // Adjust the height of the divider
+      height: 20.0, // Adjust the height of the divider
       color: Colors.grey, // Set your desired divider color
     );
   }
