@@ -1,4 +1,4 @@
-// notification_dialog.dart
+// pages/homepage/notification_dialog.dart
 import 'package:flutter/material.dart';
 
 class NotificationDialog {

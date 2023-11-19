@@ -1,7 +1,7 @@
-// bottom_navigation_bar.dart
+// pages/homepage/bottom_navigation/bottom_navigation_bar.dart
 import 'package:flutter/material.dart';
 import 'profile/profile_bottom_sheet.dart';
-import 'plus/PlusButtonBottomSheet.dart';
+import 'plus/plus_button_bottom_sheet.dart';
 
 class MyBottomNavigationBar extends StatelessWidget {
   final int selectedIndex;

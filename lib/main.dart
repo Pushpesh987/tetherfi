@@ -1,3 +1,4 @@
+//main.dart
 import 'package:flutter/material.dart';
 import 'pages/splash_screen.dart';
 

@@ -1,4 +1,4 @@
-// pages/home_page.dart
+// pages/homepage/home_page.dart
 import 'package:flutter/material.dart';
 import 'app_bar.dart';
 import 'bottom_navigation/bottom_navigation_bar.dart';
